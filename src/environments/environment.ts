@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'http://api.openweathermap.org/data/2.5/weather',
-  appId: '6d5ecfc1fbda42052eca26190e54990d'
+  appId: 'xxx'
 };
 
 /*
