@@ -1,0 +1,17 @@
+<mat-form-field>
+  <input matInput placeholder="Enter city" #cityCtrl (change)="search(cityCtrl.value)" />
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>
+<mat-card *ngIf="(weather$ | async) as result">
+  <mat-card-header>
+    <mat-card-title></mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://openweathermap.org/img/wn/{{result.weather[0]?.icon}}@2x.png" [alt]="result.main" />
+  <mat-card-content>
+    <h1></h1>
+    <p>Pressure: {{result.main.pressure}} hPa</p>
+    <p>Humidity: {{result.main.humidity}}  %</p>
+    <p>Wind:  {{result.wind.speed}} m/s</p>
+  </mat-card-content>
+</mat-card>
